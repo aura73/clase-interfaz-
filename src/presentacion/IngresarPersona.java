@@ -38,11 +38,16 @@ public class IngresarPersona extends JFrame {
                 String apellido = txtApellido.getText();
                 String idioma = cmbIdioma.getSelectedItem().toString();
                 String aceptoTerminos = (chbTerminos.isSelected()==true)? "SI":"NO";
+                String genero = (rbtFemenino.isSelected()==true)? "Femenino":
+                                (rbtMasculino.isSelected()== true)? "Masculino":
+                                (rbtOtro.isSelected()==true)? "Otro":
+                                        (rbtPrefieronNoDecirlo.isSelected())? "No indicado": "";
                 String mensaje = "Tus datos son: "+ "\n"+
                                 "Codigo:"  +codigo+ "\n"+
                                 "Nombre:"  +nombre+ "\n"+
                                 "Apellido:" +apellido+ "\n"+
                                 "Idioma: " + idioma + "\n"+
+                                "Genero: " + genero + "\n"+
                                 "Acepto Terminos : "+ aceptoTerminos ;
                 JOptionPane.showMessageDialog(guardarButton, mensaje);
             }
